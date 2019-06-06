@@ -11115,7 +11115,7 @@ var __extends = this && this.__extends || function() {
         factory: function() {
             return new InjectorDef();
         },
-        providers: [ ChildClass ]
+        providers: [ Dep, ChildClass ]
     });
     var injector = createInjector(InjectorDef);
     var child = injector.get(ChildClass);
