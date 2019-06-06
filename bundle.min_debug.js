@@ -11117,7 +11117,9 @@ var __extends = this && this.__extends || function() {
         },
         providers: [ ChildClass ]
     });
-    if (!(createInjector(InjectorDef).get(ChildClass) instanceof ChildClass)) {
+    var injector = createInjector(InjectorDef);
+    var child = injector.get(ChildClass);
+    if (!(child instanceof ChildClass)) {
         document.body.innerHTML = "<h1>Fail</h1>";
         throw new Error("fail!");
     }
