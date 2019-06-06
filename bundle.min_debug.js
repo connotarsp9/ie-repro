@@ -11117,6 +11117,7 @@ var __extends = this && this.__extends || function() {
         },
         providers: [ Dep, ChildClass ]
     });
+window.onload = function() {
     var injector = createInjector(InjectorDef);
     var child = injector.get(ChildClass);
     if (!(child instanceof ChildClass)) {
@@ -11124,4 +11125,5 @@ var __extends = this && this.__extends || function() {
         throw new Error("fail!");
     }
     document.body.innerHTML = "<h1>Pass</h1>";
+};
 }();
